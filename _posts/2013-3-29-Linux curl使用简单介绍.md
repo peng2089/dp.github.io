@@ -190,10 +190,7 @@ GET模式什么option都不用，只需要把变量写在url里面就可以了�
 
 一点需要注意的是，POST模式下的文件上的文件上传，比如
 
-	<form method="POST" enctype="multipar/form-data" action="http://cgi2.tky.3web.ne.jp/~zzh/up_file.cgi">
-	<input type=file name=upload>
-	<input type=submit name=nick value="go">
-	</form>
+
 
 这样一个HTTP表单，我们要用curl进行模拟，就该是这样的语法：
 
