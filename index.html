@@ -1,14 +1,12 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>Demo</title>
- </head>
- <body>
-  <h1>Hello World!!!</h1>
- </body>
-</html>
+---
+layout: default
+title: 我的Blog
+---
+<ul>
+{% for post in site.posts %}
+<li>
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  {{ post.excerpt }}
+</li>
+{% endfor %}
+</ul>
