@@ -1,8 +1,14 @@
----
-layout: default
-title: woniu.me
----
-<h1>蜗牛</h1>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>蜗牛 woniu.me</title>
+	<style>
+		.name { font-size:16px; font-weight:bold;}
+	</style>
+</head>
+<body>
+<header class="name">蜗牛</header>
 <ul>
 	{% for post in site.posts %}
 	<li>
@@ -10,3 +16,5 @@ title: woniu.me
 	</li>
 	{% endfor %}
 </ul>
+</body>
+</html>
