@@ -3,7 +3,7 @@ layout: default
 title: 蜗牛的部落格
 ---
 
-<h2> {{ page.title }} </h2>
+<h2><a href="{{ site.url }}"> {{ page.title }} </a></h2>
 
 <ul>
 	{% for post in site.posts %}
