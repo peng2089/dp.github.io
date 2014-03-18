@@ -1,6 +1,6 @@
 ---
 layout: default
-title: blog
+title: 蜗牛的部落格
 ---
 
 <h2> {{ page.title }} </h2>
