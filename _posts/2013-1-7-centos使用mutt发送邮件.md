@@ -6,6 +6,7 @@ tags: [ mutt,CentOS,Linux ]
 ---
 
 ### CentOS配置mutt发送邮件
+---
 
 **安装与配置**
 
