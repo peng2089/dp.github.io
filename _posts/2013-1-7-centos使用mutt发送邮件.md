@@ -4,6 +4,7 @@ title: CentOS配置mutt发送邮件
 description: CentOS配置mutt发送邮件
 category:CentOs
 ---
+
 ### CentOS配置mutt发送邮件
 
 - 安装与配置
