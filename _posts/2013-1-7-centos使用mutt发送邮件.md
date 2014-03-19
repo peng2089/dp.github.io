@@ -2,9 +2,9 @@
 layout: post
 title: CentOS配置mutt发送邮件
 description: CentOS配置mutt发送邮件
-category:CentOs,linux
+category:CentOs
 ---
-# CentOS配置mutt发送邮件
+### CentOS配置mutt发送邮件
 
 - 安装与配置
 
