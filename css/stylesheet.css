@@ -60,7 +60,7 @@ h1 {
   font-size: 28px;
   color: #000;
 }
-body h1{
+.body h1{
   font-size: 28px;
   border-bottom: 2px solid #ccc;
   color: #000;
