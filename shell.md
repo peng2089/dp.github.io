@@ -39,11 +39,11 @@ title: shell
 
 查看一天只能变动过的php文件
 
-find /www/ -name "*.php" -mtime -1 -exec ls -l {} \; 
+	find /www/ -name "*.php" -mtime -1 -exec ls -l {} \; 
 
 查看php文件中含有eval关键词的文件
 
-find /www -name "*.php*" |xargs grep "eval"
+	find /www -name "*.php*" |xargs grep "eval"
 
 另注:需要检查的关键词除了eval,还有shell_exec,base64_encode,move_uploaded_file,exec,passthru,system,iframe
 
