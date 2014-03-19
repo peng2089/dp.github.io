@@ -7,7 +7,7 @@ title: shell语句
 
 查看登录系统的用户
 
-	/etc/passwd | grep -v "/sbin/nologin" 
+	cat /etc/passwd | grep -v "/sbin/nologin" 
 
 查看登录日志
 
