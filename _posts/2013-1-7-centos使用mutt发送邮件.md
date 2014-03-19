@@ -51,7 +51,7 @@ category:CentOs,linux
 	password your_password
 	# Set a default account
 	account default ： 163
-···
+```
 
 到这儿时，最好先测试一下
 
