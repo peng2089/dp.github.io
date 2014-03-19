@@ -1,6 +1,6 @@
 ---
 layout: default
-description: A description about my blog homepage
+description: 关注后端技术、互联网技术。
 ---
 
 <div id="posts">
