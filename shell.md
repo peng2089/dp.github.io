@@ -1,6 +1,6 @@
 ---
 layout: default
-title: shell
+title: shell语句
 ---
 
 **系统安全**

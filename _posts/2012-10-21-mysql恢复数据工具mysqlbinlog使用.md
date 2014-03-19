@@ -8,13 +8,13 @@ tags: [ mysqlbinlog,数据库恢复,mysql ]
 
 首先必须确保mysql配置文件中的
 
-[mysqld] log-bin=log_name 开启(其中log_name自己定义)
+	[mysqld] log-bin=log_name 开启(其中log_name自己定义)
 
 开启的作用就是开启mysql的二进制日志，然后才可以使用mysqlbinlog工具恢复数据
 
 开启之后通过在mysql中运行：
 
-SHOW BINLOG EVENTS
+	SHOW BINLOG EVENTS
 
 来确认二进制日志的开启
 
