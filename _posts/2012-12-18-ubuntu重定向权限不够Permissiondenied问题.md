@@ -1,11 +1,11 @@
 ---
 layout: post
-title: ubuntu重定向权限不够Permission denied问题
-description: ubuntu重定向权限不够Permission denied问题
+title: ubuntu重定向权限不够Permissiondenied问题
+description: ubuntu重定向权限不够Permissiondenied问题
 tags: [ 重定向,ubuntu,Linux ]
 ---
 
-### ubuntu重定向权限不够Permission denied问题
+### ubuntu重定向权限不够Permissiondenied问题
 
 众所周知，使用 echo 并配合命令重定向是实现向文件中写入信息的快捷方式。本文介绍如何将 echo 命令与 sudo 命令配合使用，实现向那些只有系统管理员才有权限操作的文件中写入信息。
 
