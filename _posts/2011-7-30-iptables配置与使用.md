@@ -53,6 +53,6 @@ tags: [ iptable,centos,linux ]
 	service iptables restart
 
 
-学习使用iptables [link]
+[学习使用iptables][link]
 
 [link]:http://wangcong.org/articles/learning-iptables.cn.html
