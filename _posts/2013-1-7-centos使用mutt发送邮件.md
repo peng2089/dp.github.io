@@ -2,7 +2,7 @@
 layout: post
 title: CentOS配置mutt发送邮件
 description: CentOS配置mutt发送邮件
-tags: mutt,CentOS,Linux
+tags: [ mutt,CentOS,Linux ]
 ---
 
 ### CentOS配置mutt发送邮件
