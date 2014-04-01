@@ -15,7 +15,7 @@ description: 关注后端技术、互联网技术。
 <div id="pages">
   <h2>Pages</h2>
   <ul>
-    {% for page in site.html_pages %}
+    {% for page in site.pages %}
       {% if page.title %}
         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
       {% endif %}
