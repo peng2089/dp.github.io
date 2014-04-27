@@ -17,9 +17,8 @@ mysql服务起来了,端口也没有被占用,防火墙也通过了,但是php程
 
 如何彻底关掉ipv6,仅仅在以太网属性中取消是不够的.
 
-        打开注册表：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\TCPIP6\Parameters
-        新建 DWORD(32位) 项，
-        名称:DisabledComponents
-        值:FF
-        保存，重启后IPV6完全禁用，ipconfig也看不到相关的信息了！
-
+	打开注册表：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\TCPIP6\Parameters
+	新建 DWORD(32位) 项，
+	名称:DisabledComponents
+	值:FF
+	保存，重启后IPV6完全禁用，ipconfig也看不到相关的信息了！
