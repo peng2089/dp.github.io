@@ -1,6 +1,6 @@
 ---
 layout: post
-title: win8 php程序无法通过localhost访问mysql服务
+title: win8系统php程序无法通过localhost访问mysql服务
 description: win8 php程序无法通过localhost访问mysql服务
 tags: [ win8,ipv6 ]
 ---
