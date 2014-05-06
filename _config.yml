@@ -3,6 +3,8 @@ encoding: utf-8
 url: http://woniu.me
 name: 蜗牛的部落格
 
+markdown: kramdown
+
 # standard jekyll configuration options
 
 exclude: ['Rakefile', 'README.md', 'config.rb']
