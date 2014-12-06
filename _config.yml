@@ -11,7 +11,7 @@ exclude: ['Rakefile', 'README.md', 'config.rb']
 
 # configuration required for some pages
 
-domain: http://woniu.me
+#domain: http://woniu.me
 title: 蜗牛的部落格
 author: __蜗牛__
 email: peng_du2007@qq.com
