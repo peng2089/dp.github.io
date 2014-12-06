@@ -114,9 +114,9 @@ tags: [ Vagrant,CentOS ]
 
 	更改完成后退出root,su进入vagrant用户,并执行 sudo ls,查看是否能执行
 
-![在root家目录下执行sudo ls]({{ site.url }}/static/images/QQ截图201411111729173.png "在root家目录下执行sudo ls")
+    ![在root家目录下执行sudo ls]({{ site.url }}/static/images/QQ截图201411111729173.png "在root家目录下执行sudo ls")
 
-如上图所示,则表示配置正确.
+    如上图所示,则表示配置正确.
 
 
 - 为了vagrant用户有执行ssh的权限, 添加vagrant's public key
@@ -156,11 +156,11 @@ tags: [ Vagrant,CentOS ]
 
 		> vagrant package --output centos65-x64.box --base centos65-x64
 
-![vagrant package]({{ site.url }}/static/images/QQ截图20141111172917.png "vagrant package")
+    ![vagrant package]({{ site.url }}/static/images/QQ截图20141111172917.png "vagrant package")
 
-**注**: 
-1.centos65-x64.box为box的名称,base后面跟的是当前虚拟机所在的目录名称
-2.在执行以上命令前,需要打开虚拟机.执行上面的命令后,虚拟机会关闭然后进入生成box流程.如果不事先打开虚拟机,生成box的过程可能会报错.
+    **注**: 
+    1.centos65-x64.box为box的名称,base后面跟的是当前虚拟机所在的目录名称
+    2.在执行以上命令前,需要打开虚拟机.执行上面的命令后,虚拟机会关闭然后进入生成box流程.如果不事先打开虚拟机,生成box的过程可能会报错.
 
 
 - 创建Vagrant 虚拟机
@@ -174,22 +174,22 @@ tags: [ Vagrant,CentOS ]
 
 		> vagrant box add centos65-x64 e:/box/centos65-x64.box # 添加box到虚拟机
 
-![添加box到虚拟机]({{ site.url }}/static/images/QQ截图201411111729171.png "添加box到虚拟机")
-提示创建成功.
+    ![添加box到虚拟机]({{ site.url }}/static/images/QQ截图201411111729171.png "添加box到虚拟机")
+    提示创建成功.
 
-	> vagrant up # 启动虚拟机
+	    > vagrant up # 启动虚拟机
 
-![启动vagrant虚拟机]({{ site.url }}/static/images/QQ截图201411111729172.png "启动vagrant虚拟机")
+    ![启动vagrant虚拟机]({{ site.url }}/static/images/QQ截图201411111729172.png "启动vagrant虚拟机")
 
-	> vagrant reload # 重新加载Vagrantfile配置文件
+        > vagrant reload # 重新加载Vagrantfile配置文件
 
-	> vagrant suspend # 暂停虚拟机
+        > vagrant suspend # 暂停虚拟机
 
-	> vagrant resume # 恢复虚拟机
+        > vagrant resume # 恢复虚拟机
 
-	> vagrant halt # 关闭虚拟机
+        > vagrant halt # 关闭虚拟机
 
-	> vagrant destroy # 删除销毁虚拟机
+        > vagrant destroy # 删除销毁虚拟机
 
 
 ## 测试
