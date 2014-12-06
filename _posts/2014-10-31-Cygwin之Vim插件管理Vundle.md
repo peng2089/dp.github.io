@@ -2,7 +2,7 @@
 layout: post
 title: Cygwin 之 Vim插件管理Vundle
 description: Cygwin 之 Vim插件管理Vundle
-tags: [ Vagrant,CentOS ]
+tags: [ Cygwin,Vundle ]
 ---
 
 > Vundle - vim插件管理工具
@@ -75,6 +75,6 @@ tags: [ Vagrant,CentOS ]
 
 **安装插件**
 
-启动vim 并运行:BundleInstall(原文中是PluginInstall) 即可安装
+启动vim 并运行:PluginInstall 即可安装
 
 Vundle : https://github.com/gmarik/Vundle.vim
