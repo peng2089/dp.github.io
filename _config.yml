@@ -5,8 +5,10 @@ name: 蜗牛的部落格
 
 markdown: kramdown
 
-# standard jekyll configuration options
+# code highlighting
+pygments: true
 
+# standard jekyll configuration options
 exclude: ['Rakefile', 'README.md', 'config.rb']
 
 # configuration required for some pages
