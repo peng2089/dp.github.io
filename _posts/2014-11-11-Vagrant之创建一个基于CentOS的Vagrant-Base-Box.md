@@ -114,7 +114,7 @@ tags: [ Vagrant,CentOS ]
 
 	更改完成后退出root,su进入vagrant用户,并执行 sudo ls,查看是否能执行
 
-![在root家目录下执行sudo ls]({{ site.url }}/QQ截图201411111729173.png "在root家目录下执行sudo ls")
+![在root家目录下执行sudo ls]({{ site.url }}/static/images/QQ截图201411111729173.png "在root家目录下执行sudo ls")
 
 如上图所示,则表示配置正确.
 
@@ -156,7 +156,7 @@ tags: [ Vagrant,CentOS ]
 
 		> vagrant package --output centos65-x64.box --base centos65-x64
 
-![vagrant package]({{ site.url }}/QQ截图20141111172917.png "vagrant package")
+![vagrant package]({{ site.url }}/static/images/QQ截图20141111172917.png "vagrant package")
 
 **注**: 
 1.centos65-x64.box为box的名称,base后面跟的是当前虚拟机所在的目录名称
@@ -174,12 +174,12 @@ tags: [ Vagrant,CentOS ]
 
 		> vagrant box add centos65-x64 e:/box/centos65-x64.box # 添加box到虚拟机
 
-![添加box到虚拟机]({{ site.url }}/QQ截图201411111729171.png "添加box到虚拟机")
+![添加box到虚拟机]({{ site.url }}/static/images/QQ截图201411111729171.png "添加box到虚拟机")
 提示创建成功.
 
 	> vagrant up # 启动虚拟机
 
-![启动vagrant虚拟机]({{ site.url }}/QQ截图201411111729172.png "启动vagrant虚拟机")
+![启动vagrant虚拟机]({{ site.url }}/static/images/QQ截图201411111729172.png "启动vagrant虚拟机")
 
 	> vagrant reload # 重新加载Vagrantfile配置文件
 
@@ -214,7 +214,7 @@ tags: [ Vagrant,CentOS ]
 
 后来在github上vagrant的issue中发现了以下内容
 
-![vagrant issue]({{ site.url }}/QQ截图20141112163143.png "vagrant issue")
+![vagrant issue]({{ site.url }}/static/images/QQ截图20141112163143.png "vagrant issue")
 
 So it is ,from now on we should use the commond :
 
