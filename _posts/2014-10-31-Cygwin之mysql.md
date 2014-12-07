@@ -7,8 +7,6 @@ tags: [ Cygwin ]
 ---
 
 
-# Cygwin 之 mysql
-
 众所周知,连接mysql的方式是
 
 	mysql -u root -p
