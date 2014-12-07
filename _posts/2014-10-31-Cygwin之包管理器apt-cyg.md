@@ -42,9 +42,6 @@ tags: [ Cygwin,apt-cyg ]
 
 也可以把默认的缓存和下载站点存到文件中：
 
-> vi /bin/apt-cyg
-
-    #mirror=ftp://mirror.mcs.anl.gov/pub/cygwin
-    #cache=/setup
+    # vi /bin/apt-cyg
     mirror=http://mirrors.163.com/cygwin
     cache=/cygdrive/d/downloads/cygwin

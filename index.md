@@ -1,5 +1,6 @@
 ---
 layout: default
+keywords:  web,php,CentOS,Go,Python
 description: 关注后端技术、互联网技术。
 ---
 
@@ -7,7 +8,7 @@ description: 关注后端技术、互联网技术。
   <h2>Blog Posts</h2>
   <ul>
     {% for post in site.posts %}
-      <li><span>{{ post.date | date:"%F" }}</span> - <a href="{{ post.url }}"  target="_blank">{{ post.title }}</a></li>
+      <li><span>{{ post.date | date:"%F" }}</span>   <a href="{{ post.url }}"  target="_blank">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
