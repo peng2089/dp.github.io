@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ubuntu配置安装LAMP环境
+keywords: LAMP,LAMP环境,Ubuntu
 description: ubuntu配置安装LAMP环境
 tags: [ lamp,ubuntu,Linux ]
 ---

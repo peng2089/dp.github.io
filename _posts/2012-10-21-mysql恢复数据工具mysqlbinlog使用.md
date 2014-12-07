@@ -1,6 +1,7 @@
 ---
 layout: post
 title: mysql恢复数据工具mysqlbinlog使用
+keywords: mysqlbinlog,mysql
 description: mysql恢复数据工具mysqlbinlog使用
 tags: [ mysqlbinlog,数据库恢复,mysql ]
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ubuntu重定向权限不够Permissiondenied问题
+keywords: Permissiondenied,权限不够,重定向权限,Ubuntu
 description: ubuntu重定向权限不够Permissiondenied问题
 tags: [ 重定向,ubuntu,Linux ]
 ---

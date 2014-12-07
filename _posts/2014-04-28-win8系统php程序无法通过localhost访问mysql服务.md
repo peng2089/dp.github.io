@@ -1,6 +1,7 @@
 ---
 layout: post
 title: win8系统php程序无法通过localhost访问mysql服务
+keywords: php,访问mysql,win8.1
 description: win8系统php程序无法通过localhost访问mysql服务
 tags: [ win8,ipv6 ]
 ---

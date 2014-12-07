@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Vagrant之创建一个基于CentOS的Vagrant Base Box
+keywords: vargrant,box,sudo,VBoxGuestAdditions,VirtualBox,CentOS
 description: Vagrant之创建一个基于CentOS的Vagrant Base Box
 tags: [ Vagrant,CentOS ]
 ---

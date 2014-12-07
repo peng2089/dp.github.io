@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cygwin之包管理器 apt-cyg
+keywords: apt-cyg,Cygwin
 description: Cygwin之包管理器 apt-cyg
 tags: [ Cygwin,apt-cyg ]
 ---

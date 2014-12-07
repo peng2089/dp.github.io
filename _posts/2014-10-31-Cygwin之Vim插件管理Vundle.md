@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cygwin 之 Vim插件管理Vundle
+keywords: Vundle,Vim,Cygwin,Vim插件
 description: Cygwin 之 Vim插件管理Vundle
 tags: [ Cygwin,Vundle ]
 ---

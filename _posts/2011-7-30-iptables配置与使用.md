@@ -1,6 +1,7 @@
 ---
 layout: post
 title: iptables配置与使用
+keywords: iptables,iptables配置使用,CentOS
 description: iptables配置与使用
 tags: [ iptable,centos,linux ]
 ---
