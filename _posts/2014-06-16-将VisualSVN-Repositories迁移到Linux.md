@@ -7,9 +7,7 @@ tags: [ svn,服务器,CentOS ]
 ---
 
 >说明
-
 > windows : 192.168.1.5
-
 > linux   : 192.168.1.4
 
 
