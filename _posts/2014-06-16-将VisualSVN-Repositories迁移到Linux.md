@@ -26,10 +26,10 @@ tags: [ svn,服务器,CentOS ]
 
 把e:/repositories/下的htpasswd重命名为passwd上传到linux端的/data/svn下,并修改其内容为
 
-```
-[users]
-test = 123456
-```
+
+    [users]
+    test = 123456
+
 
 ## Linux端
 
@@ -44,11 +44,11 @@ test = 123456
 
 - 修改/data/svn/svnserve.conf
 
-```
+
     [general]
     password-db = /data/svn/passwd
     authz-db = /data/svn/authz
-```
+
 
 - 启动svn服务
 
