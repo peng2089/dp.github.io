@@ -17,8 +17,7 @@ title: Eclipse Plugin
 
 - goeclipse(Go lang 开发工具)
 
-        https://github.com/GoClipse/releases/raw/master/
-        [原]http://goclipse.googlecode.com/svn/trunk/goclipse-update-site/
+        http://goclipse.github.io/releases/
 
 
 - Regex Util(正则)
