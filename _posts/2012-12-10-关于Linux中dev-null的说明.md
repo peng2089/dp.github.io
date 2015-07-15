@@ -1,28 +1,28 @@
 ---
 layout: post
-title: ¹ØÓÚLinuxÖÐ/dev/nullµÄËµÃ÷
+title: å…³äºŽLinuxä¸­/dev/nullçš„è¯´æ˜Ž
 keywords: linux
-description: ¹ØÓÚLinuxÖÐ/dev/nullµÄËµÃ÷
+description: å…³äºŽLinuxä¸­/dev/nullçš„è¯´æ˜Ž
 tags: [ linux ]
 ---
 
-shellÖÐ¿ÉÄÜ¾­³£ÄÜ¿´µ½£º>/dev/null 2>&1
+shellä¸­å¯èƒ½ç»å¸¸èƒ½çœ‹åˆ°ï¼š>/dev/null 2>&1
 
-ÃüÁîµÄ½á¹û¿ÉÒÔÍ¨¹ý %> µÄÐÎÊ½À´¶¨ÒåÊä³ö,ÆäÖÐ %> ´ú±íÎÄ¼þÃèÊö·û
+å‘½ä»¤çš„ç»“æžœå¯ä»¥é€šè¿‡ %> çš„å½¢å¼æ¥å®šä¹‰è¾“å‡º,å…¶ä¸­ %> ä»£è¡¨æ–‡ä»¶æè¿°ç¬¦
 
-ÎÒÃÇ½«Õâ¸öÃüÁî×éºÏ£º">/dev/null 2>&1" ²ðÎªËÄ²¿·ÖÀ´·ÖÎöÏÂ:
+æˆ‘ä»¬å°†è¿™ä¸ªå‘½ä»¤ç»„åˆï¼š">/dev/null 2>&1" æ‹†ä¸ºå››éƒ¨åˆ†æ¥åˆ†æžä¸‹:
 
-1£ºÊ×ÏÈ 0> ±íÊ¾stdin±ê×¼ÊäÈë; 1> ±íÊ¾stdout±ê×¼Êä³ö; 2> ±íÊ¾stderr´íÎóÊä³ö;
+1ï¼šé¦–å…ˆ 0> è¡¨ç¤ºstdinæ ‡å‡†è¾“å…¥; 1> è¡¨ç¤ºstdoutæ ‡å‡†è¾“å‡º; 2> è¡¨ç¤ºstderré”™è¯¯è¾“å‡º;
 
-2£º·ûºÅ > µÈ¼ÛÓÚ 1> (ÏµÍ³Ä¬ÈÏÎª1,Ê¡ÂÔÁËÏÈ); ËùÒÔ">/dev/null"µÈÍ¬ÓÚ "1>/dev/null"
+2ï¼šç¬¦å· > ç­‰ä»·äºŽ 1> (ç³»ç»Ÿé»˜è®¤ä¸º1,çœç•¥äº†å…ˆ); æ‰€ä»¥">/dev/null"ç­‰åŒäºŽ "1>/dev/null"
 
-3£º/dev/null ´ú±í¿ÕÉè±¸ÎÄ¼þ
+3ï¼š/dev/null ä»£è¡¨ç©ºè®¾å¤‡æ–‡ä»¶
 
-4£º& ¿ÉÒÔÀí½âÎªÊÇ"µÈÍ¬ÓÚ"µÄÒâË¼£¬2>&1£¬¼´±íÊ¾2µÄÊä³öÖØ¶¨ÏòµÈÍ¬ÓÚ1
+4ï¼š& å¯ä»¥ç†è§£ä¸ºæ˜¯"ç­‰åŒäºŽ"çš„æ„æ€ï¼Œ2>&1ï¼Œå³è¡¨ç¤º2çš„è¾“å‡ºé‡å®šå‘ç­‰åŒäºŽ1
 
-Òò´Ë£¬>/dev/null 2>&1 Ò²¿ÉÒÔÐ´³É"1> /dev/null 2> &1"
+å› æ­¤ï¼Œ>/dev/null 2>&1 ä¹Ÿå¯ä»¥å†™æˆ"1> /dev/null 2> &1"
 
-ÄÇÃ´±¾ÎÄ±êÌâµÄÓï¾äÖ´ÐÐ¹ý³ÌÎª£º
+é‚£ä¹ˆæœ¬æ–‡æ ‡é¢˜çš„è¯­å¥æ‰§è¡Œè¿‡ç¨‹ä¸ºï¼š
 
-1>/dev/null £ºÊ×ÏÈ±íÊ¾±ê×¼Êä³öÖØ¶¨Ïòµ½¿ÕÉè±¸ÎÄ¼þ£¬Ò²¾ÍÊÇ²»Êä³öÈÎºÎÐÅÏ¢µ½ÖÕ¶Ë£¬Ëµ°×ÁË¾ÍÊÇ²»ÏÔÊ¾ÈÎºÎÐÅÏ¢¡£
-2>&1 £º½Ó×Å£¬½«±ê×¼´íÎóÊä³öÖØ¶¨Ïò µ½ ±ê×¼Êä³ö£¬ÒòÎªÖ®Ç°±ê×¼Êä³öÒÑ¾­ÖØ¶¨Ïòµ½ÁË¿ÕÉè±¸ÎÄ¼þ£¬ËùÒÔ±ê×¼´íÎóÊä³öÒ²ÖØ¶¨Ïòµ½¿ÕÉè±¸ÎÄ¼þ¡£
+1>/dev/null ï¼šé¦–å…ˆè¡¨ç¤ºæ ‡å‡†è¾“å‡ºé‡å®šå‘åˆ°ç©ºè®¾å¤‡æ–‡ä»¶ï¼Œä¹Ÿå°±æ˜¯ä¸è¾“å‡ºä»»ä½•ä¿¡æ¯åˆ°ç»ˆç«¯ï¼Œè¯´ç™½äº†å°±æ˜¯ä¸æ˜¾ç¤ºä»»ä½•ä¿¡æ¯ã€‚
+2>&1 ï¼šæŽ¥ç€ï¼Œå°†æ ‡å‡†é”™è¯¯è¾“å‡ºé‡å®šå‘ åˆ° æ ‡å‡†è¾“å‡ºï¼Œå› ä¸ºä¹‹å‰æ ‡å‡†è¾“å‡ºå·²ç»é‡å®šå‘åˆ°äº†ç©ºè®¾å¤‡æ–‡ä»¶ï¼Œæ‰€ä»¥æ ‡å‡†é”™è¯¯è¾“å‡ºä¹Ÿé‡å®šå‘åˆ°ç©ºè®¾å¤‡æ–‡ä»¶ã€‚
