@@ -157,6 +157,5 @@ web目录权限设置(设定目录:/var/www/test)
 目录权限
 
 	find -type d -exec chmod 750 {} \;
-
 	find -not -type d -exec chmod 640 {} \;
 
