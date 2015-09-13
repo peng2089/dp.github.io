@@ -31,17 +31,17 @@ Crontab 默认会将定时执行的结果通过mail返回给用户。 如果没�
 
 2. 我的解决办法: 先创建一个shell脚本文件,然后把命令写入这个shell脚本中,然后在把这个shell脚本添加到crontab中,然后再导向到"无底洞" /dev/null.
 
-- shell脚本order.sh
+	- shell脚本order.sh
 
-		> # touch /root/shell/order.sh
-		> # vi /root/shell/order.sh
-		# 脚本内容
-		#! /bin/bash
-		/usr/bin/curl http://www.test.com
+			> # touch /root/shell/order.sh
+			> # vi /root/shell/order.sh
+			# 脚本内容
+			#! /bin/bash
+			/usr/bin/curl http://www.test.com
 
-- crontab
+	- crontab
 
-		*/5 * * * * /root/shell/order.sh > /dev/null 2>&1
+			*/5 * * * * /root/shell/order.sh > /dev/null 2>&1
 
 
 	这样就没有输出了,也没有邮件了.
