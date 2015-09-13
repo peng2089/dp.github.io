@@ -48,6 +48,6 @@ Crontab 默认会将定时执行的结果通过mail返回给用户。 如果没�
 
 3. 还剩最后一个问题: **如何清空这个目录?**
 
-	find /var/spool/clientmqueue/ -type f -exec rm {} \;
+		find /var/spool/clientmqueue/ -type f -exec rm {} \;
 
 到此结束.
