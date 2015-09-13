@@ -27,7 +27,7 @@ Crontab 默认会将定时执行的结果通过mail返回给用户。 如果没�
 
 1. 这是网上的解决方法, 但是不知道什么原因,我这边没用, 依然输出
 
-	*/5 * * * * /usr/bin/curl http://www.test.com > /dev/null 2>&1
+		*/5 * * * * /usr/bin/curl http://www.test.com > /dev/null 2>&1
 
 2. 我的解决办法: 先创建一个shell脚本文件,然后把命令写入这个shell脚本中,然后在把这个shell脚本添加到crontab中,然后再导向到"无底洞" /dev/null.
 
