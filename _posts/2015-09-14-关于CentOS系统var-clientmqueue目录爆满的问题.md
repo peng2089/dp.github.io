@@ -33,17 +33,21 @@ Crontab 默认会将定时执行的结果通过mail返回给用户。 如果没�
 
 - shell脚本order.sh
 
-```
-> # touch /root/shell/order.sh
-> # vi /root/shell/order.sh
-# 脚本内容
-#! /bin/bash
-/usr/bin/curl http://www.test.com
-```
+		> # touch /root/shell/order.sh
+		> # vi /root/shell/order.sh
+		# 脚本内容
+		#! /bin/bash
+		/usr/bin/curl http://www.test.com
+
 - crontab
 
-```
-*/5 * * * * /root/shell/order.sh > /dev/null 2>&1
-```
+		*/5 * * * * /root/shell/order.sh > /dev/null 2>&1
+
 
 这样就没有输出了,也没有邮件了.
+
+还剩最后一个问题: 如何清空这个目录?
+
+	find /var/spool/clientmqueue/ -type f -exec rm {} \;
+
+到此结束.
