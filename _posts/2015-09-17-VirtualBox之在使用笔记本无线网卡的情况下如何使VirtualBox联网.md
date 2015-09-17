@@ -5,8 +5,11 @@ keywords: VirtualBox,联网, 无线网卡
 description: VirtualBox之在使用笔记本无线网卡的情况下如何使VirtualBox联网
 tags: [ VirtualBox, 虚拟机 ]
 ---
+问题:
+最近刚换了个公司, 然后公司使用无线网上网,结果笔记本上的虚拟机就连不上网了. 一直使用的都是桥接方式.后来进行了相关查询, 有两种方式可以解决这个问题.
 
-解决办法:
+
+解决办法一:
 
 1. "我的电脑" -> 右键 "管理" -> 计算机管理(本地)->系统工具->设备管理器 -> 右键 "添加过时硬件" -> 下一步(安装我手动从列表选择的硬件) ->在常见硬件类型中选择"网络适配器" -> 在网络适配器中选择"Microsoft->Microsoft Loopback Adapter" -> 下一步.... 完成
 
@@ -30,3 +33,4 @@ tags: [ VirtualBox, 虚拟机 ]
     ![VirtualBox]({{ site.url }}/static/images/20150917-07.png "VirtualBox")
     ![VirtualBox]({{ site.url }}/static/images/20150917-08.png "VirtualBox")
 
+4. 然后进入虚拟机进行相关设置就可以了.
