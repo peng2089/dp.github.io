@@ -25,7 +25,7 @@ tags: [ VirtualBox, 虚拟机 ]
     ![无线网络连接]({{ site.url }}/static/images/20150917-09.png "无线网络连接")
     ![无线网络连接]({{ site.url }}/static/images/20150917-10.png "无线网络连接")
 
-3.打开VirtualBox->"设置"->"网络"->链接方式"桥接网卡",界面名称:"Mircrosoft Loopback Adapter". 然后确定.
+3. 打开VirtualBox->"设置"->"网络"->链接方式"桥接网卡",界面名称:"Mircrosoft Loopback Adapter". 然后确定.
 
     ![VirtualBox]({{ site.url }}/static/images/20150917-07.png "VirtualBox")
     ![VirtualBox]({{ site.url }}/static/images/20150917-08.png "VirtualBox")
