@@ -8,7 +8,31 @@ tags: [ iptable,centos,linux ]
 
 简介:iptables 是与最新的 2.4.x 版本 Linux 内核集成的 IP 信息包过滤系统。如果 Linux 系统连接到因特网或 LAN、服务器或连接 LAN 和因特网的代理服务器， 则该系统有利于在 Linux 系统上更好地控制 IP 信息包过滤和防火墙配置。 —来自百度百科
 
-配置使用说明: 
+# 开启与关闭
+
+	#重启生效
+	[root@vm01 shell]# chkconfig iptables on
+	[root@vm01 shell]# chkconfig iptables off
+	#即时生效,重启后失效
+	[root@vm01 shell]# service iptables start
+	[root@vm01 shell]# service iptables stop
+	[root@vm01 shell]# service iptables restart
+	# 或者
+	[root@vm01 shell]# /etc/init.d/iptables start
+	[root@vm01 shell]# /etc/init.d/iptables stop
+	[root@vm01 shell]# /etc/init.d/iptables restart
+
+# 配置
+
+## 查看本机iptables规则
+
+	[root@vm01 shell] iptables -L -n
+
+## 清除规则
+
+	[root@vm01 shell]# iptables -F        #清除预设表filter中的所有规则链的规则
+	[root@vm01 shell]# iptables -X        #清除预设表filter中使用者自定链中的规则
+
 
 **封单个IP**
 
@@ -54,6 +78,6 @@ tags: [ iptable,centos,linux ]
 	service iptables restart
 
 
-[学习使用iptables][link]
+[Iptables 指南 1.1.19][link]
 
-[link]:http://wangcong.org/articles/learning-iptables.cn.html
+[link]:https://www.frozentux.net/iptables-tutorial/cn/iptables-tutorial-cn-1.1.19.html
