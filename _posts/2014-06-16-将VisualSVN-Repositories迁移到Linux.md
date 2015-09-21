@@ -17,7 +17,7 @@ tags: [ svn,服务器,CentOS ]
 
 - 导出本地Repositories
 
-        > svnadmin.exe dump e:/repositories/repo_name &gt; repo_name.dump
+        > svnadmin.exe dump e:/repositories/repo_name > repo_name.dump
 
 
 - 上传authz,htpasswd
@@ -40,7 +40,7 @@ tags: [ svn,服务器,CentOS ]
 
 - 导入dump文件
 
-        # svnadmin load /data/svn/repo_name &lt; repo_name.dump
+        # svnadmin load /data/svn/repo_name < repo_name.dump
 
 - 修改/data/svn/svnserve.conf
 
