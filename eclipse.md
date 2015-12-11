@@ -28,6 +28,7 @@ title: Eclipse Plugin
 - Eclipse SQL Explorer
 
         http://eclipsesql.sourceforge.net/
+        
 **其他**
 
 - Eclipse Color Themes (配色方案)
