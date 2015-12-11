@@ -24,7 +24,10 @@ title: Eclipse Plugin
 
         http://sourceforge.net/projects/regex-util/
         In Eclipse choose Window -> Show View -> Other -> Regex Util
+        
+- Eclipse SQL Explorer
 
+        http://eclipsesql.sourceforge.net/
 **其他**
 
 - Eclipse Color Themes (配色方案)
