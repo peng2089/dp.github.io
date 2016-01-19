@@ -36,7 +36,7 @@ tags: [ ssh,centos,linux ]
 		+-----------------+
 
 
-now, you have two files, one public key with .pub suffix(vm01_rsa.pub), and another one is private key(vm01_rsa), under ～/.ssh directory.
+	now, you have two files, one public key with .pub suffix(vm01_rsa.pub), and another one is private key(vm01_rsa), under ～/.ssh directory.
 
 2. So now, you need to copy public key(vm01_rsa.pub) to the remote machina(server)
 
