@@ -7,9 +7,11 @@ tags: [ ssh,centos,linux ]
 ---
 
 > local(ubuntu 14.04LTS): 192.168.1.5
+
 > server(CentOS 6.6): 192.168.1.10
 
 1. The first thing you need to do is generate a key.
+
 
 	$ ssh-keygen -t rsa
 	Generating public/private rsa key pair.
@@ -33,13 +35,17 @@ tags: [ ssh,centos,linux ]
 	|+o  ... .E       |
 	+-----------------+
 
+
 now, you have two files, one public key with .pub suffix(vm01_rsa.pub), and another one is private key(vm01_rsa), under ～/.ssh directory.
 
 2. So now, you need to copy public key(vm01_rsa.pub) to the remote machina(server)
 
+
 	$ scp ~/.ssh/vm01_rsa.pub root@192.168.1.10
 
+
 3. login server
+
 
 	$ mkdir ~/.ssh
 	$ chmod 700 .ssh
@@ -50,10 +56,13 @@ now, you have two files, one public key with .pub suffix(vm01_rsa.pub), and anot
 
 4. open Pubkey authentication in server.
 
+
 	$ vi /etc/ssh/sshd_config
 	PubkeyAuthentication yes
 
+
 5. close pam authentication in server.
+
 
 	UserPAM no
 
