@@ -12,6 +12,7 @@ tags: [ ssh,centos,linux ]
 
 1. The first thing you need to do is generate a key.
 
+
 	```shell
 	$ ssh-keygen -t rsa
 	Generating public/private rsa key pair.
@@ -40,11 +41,13 @@ now, you have two files, one public key with .pub suffix(vm01_rsa.pub), and anot
 
 2. So now, you need to copy public key(vm01_rsa.pub) to the remote machina(server)
 
+
 	```shell
 	$ scp ~/.ssh/vm01_rsa.pub root@192.168.1.10
 	```
 
 3. login server
+
 
 	```shell
 	$ mkdir ~/.ssh
@@ -56,12 +59,14 @@ now, you have two files, one public key with .pub suffix(vm01_rsa.pub), and anot
 
 4. open Pubkey authentication in server.
 
+
 	```shell
 	$ vi /etc/ssh/sshd_config
 	PubkeyAuthentication yes
 	```
 
 5. close pam authentication in server.
+
 
 	```shell
 	UserPAM no
