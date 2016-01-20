@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Login Using SSH Public Key
+title: 使用PublicKey登录SSH
 keywords: Public Key, SSH
 description: Login Using SSH Public Key
 tags: [ ssh,centos,linux ]
 ---
 
-> local(ubuntu 14.04LTS): 192.168.1.5
+> 本地(ubuntu 14.04LTS): 192.168.1.5
 
-> server(CentOS 6.6): 192.168.1.10
+> 服务器(CentOS 6.6): 192.168.1.10
 
-1. The first thing you need to do is generate a key.
+1. 首先,要在本地机器上生成密钥.
 
 		$ ssh-keygen -t rsa
 		Generating public/private rsa key pair.
@@ -34,14 +34,17 @@ tags: [ ssh,centos,linux ]
 		|+o  ... .E       |
 		+-----------------+
 
+	以上操作会在~/.ssh/目录下生成两个文件, vm01_rsa与vm01_rsa.pub. 其中后缀是.pub的就是公钥, 另一个是私钥.
 
-	now, you have two files, one public key with .pub suffix(vm01_rsa.pub), and another one is private key(vm01_rsa), under ～/.ssh directory.
+	注: 如果本地是windows的话, key需要使用相应的ssh客户端生成, 如:putty-gen, git for windows 之类的工具.
 
-2. So now, you need to copy public key(vm01_rsa.pub) to the remote machina(server)
+	
+
+2. 现在, 需要把本地生成的key中的公钥(public key), 也就是后缀是.pub的key,上传到服务器上.
 
 		$ scp ~/.ssh/vm01_rsa.pub root@192.168.1.10
 
-3. login server
+3. 登录服务器, 进行如下操作(把上传的publickey 导入到服务器中).
 
 		$ mkdir ~/.ssh
 		$ chmod 700 .ssh
@@ -49,17 +52,18 @@ tags: [ ssh,centos,linux ]
 		$ rm -rf vm01_rsa.pub
 		$ chmod 600 ~/.ssh/*
 
-4. open Pubkey authentication in server.
+4. 配置服务器端的ssh, 打开publicKey认证.
 
 		$ vi /etc/ssh/sshd_config
 		PubkeyAuthentication yes
 
-5. close pam authentication in server.
+5. 现在就可以使用ssh客户端导入本地生成的私钥(vm01_rsa), 登录服务器.
 
-		UserPAM no
+到现在为止, 登录服务器就可以使用密钥登录了, 但是还有以下几个地方需要配置.
 
-That's it!
+1. ssh-server端口更改
 
+2. ssh-server停止使用传统密码登录
 
 
 
