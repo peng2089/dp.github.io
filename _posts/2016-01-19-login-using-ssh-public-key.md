@@ -12,7 +12,7 @@ tags: [ ssh,centos,linux ]
 
 1. 首先,要在本地机器上生成密钥.
 
-	{% highlight shell %}
+	~~~ shell
 	$ ssh-keygen -t rsa
 	Generating public/private rsa key pair.
 	Enter file in which to save the key (/home/ioioj5/.ssh/id_rsa): /home/ioioj5/.ssh/vm01_rsa
@@ -34,7 +34,7 @@ tags: [ ssh,centos,linux ]
 	|= .. . .         |
 	|+o  ... .E       |
 	+-----------------+
-	{% endhighlight %}
+	~~~
 
 	以上操作会在~/.ssh/目录下生成两个文件, vm01_rsa与vm01_rsa.pub. 其中后缀是.pub的就是公钥, 另一个是私钥.
 
