@@ -12,7 +12,7 @@ tags: [ ssh,centos,linux ]
 
 1. 首先,要在本地机器上生成密钥.
 
-	{% highlight shell  %}
+	{% highlight shell %}
 	$ ssh-keygen -t rsa
 	Generating public/private rsa key pair.
 	Enter file in which to save the key (/home/ioioj5/.ssh/id_rsa): /home/ioioj5/.ssh/vm01_rsa
@@ -36,21 +36,21 @@ tags: [ ssh,centos,linux ]
 	+-----------------+
 	{% endhighlight %}
 
-以上操作会在~/.ssh/目录下生成两个文件, vm01_rsa与vm01_rsa.pub. 其中后缀是.pub的就是公钥, 另一个是私钥.
+	以上操作会在~/.ssh/目录下生成两个文件, vm01_rsa与vm01_rsa.pub. 其中后缀是.pub的就是公钥, 另一个是私钥.
 
-注: 如果本地是windows的话, key需要使用相应的ssh客户端生成, 如:putty-gen, git for windows 之类的工具.
+	注: 如果本地是windows的话, key需要使用相应的ssh客户端生成, 如:putty-gen, git for windows 之类的工具.
 
 	
 
 2. 现在, 需要把本地生成的key中的公钥(public key), 也就是后缀是.pub的key,上传到服务器上.
 
-	{% highlight shell  %}
+	{% highlight shell %}
 	$ scp ~/.ssh/vm01_rsa.pub root@192.168.1.10
 	{% endhighlight %}
 
 3. 登录服务器, 进行如下操作(把上传的publickey 导入到服务器中).
 
-	{% highlight shell  %}
+	{% highlight shell %}
 	$ mkdir ~/.ssh
 	$ chmod 700 .ssh
 	$ cat vm01_rsa.pub >> ~/.ssh/authorized_keys
@@ -60,7 +60,7 @@ tags: [ ssh,centos,linux ]
 
 4. 配置服务器端的ssh, 打开publicKey认证.
 
-	{% highlight shell  %}
+	{% highlight shell %}
 	$ vi /etc/ssh/sshd_config
 	PubkeyAuthentication yes
 	{% endhighlight %}
