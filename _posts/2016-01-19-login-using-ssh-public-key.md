@@ -12,31 +12,33 @@ tags: [ ssh,centos,linux ]
 
 1. 首先,要在本地机器上生成密钥.
 
-		$ ssh-keygen -t rsa
-		Generating public/private rsa key pair.
-		Enter file in which to save the key (/home/ioioj5/.ssh/id_rsa): /home/ioioj5/.ssh/vm01_rsa
-		Enter passphrase (empty for no passphrase): 
-		Enter same passphrase again: 
-		Your identification has been saved in /home/ioioj5/.ssh/vm01_rsa.
-		Your public key has been saved in /home/ioioj5/.ssh/vm01_rsa.pub.
-		The key fingerprint is:
-		90:26:68:1c:e9:b2:7a:a8:38:f4:31:52:fc:d8:eb:f7 ioioj5@dp
-		The key's randomart image is:
-		+--[ RSA 2048]----+
-		|  ..             |
-		| ..o   .         |
-		| .= . +          |
-		|...o o .         |
-		| o. +   S        |
-		|.o + o           |
-		|o.o o .          |
-		|= .. . .         |
-		|+o  ... .E       |
-		+-----------------+
+{% highlight python  %}
+$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ioioj5/.ssh/id_rsa): /home/ioioj5/.ssh/vm01_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/ioioj5/.ssh/vm01_rsa.
+Your public key has been saved in /home/ioioj5/.ssh/vm01_rsa.pub.
+The key fingerprint is:
+90:26:68:1c:e9:b2:7a:a8:38:f4:31:52:fc:d8:eb:f7 ioioj5@dp
+The key's randomart image is:
++--[ RSA 2048]----+
+|  ..             |
+| ..o   .         |
+| .= . +          |
+|...o o .         |
+| o. +   S        |
+|.o + o           |
+|o.o o .          |
+|= .. . .         |
+|+o  ... .E       |
++-----------------+
+{% endhighlight %}
 
-	以上操作会在~/.ssh/目录下生成两个文件, vm01_rsa与vm01_rsa.pub. 其中后缀是.pub的就是公钥, 另一个是私钥.
+以上操作会在~/.ssh/目录下生成两个文件, vm01_rsa与vm01_rsa.pub. 其中后缀是.pub的就是公钥, 另一个是私钥.
 
-	注: 如果本地是windows的话, key需要使用相应的ssh客户端生成, 如:putty-gen, git for windows 之类的工具.
+注: 如果本地是windows的话, key需要使用相应的ssh客户端生成, 如:putty-gen, git for windows 之类的工具.
 
 	
 
