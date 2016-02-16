@@ -7,7 +7,7 @@ title: Eclipse Plugin
 
 - PDT(php开发)
 
-        http://download.eclipse.org/releases/juno(or luna or something else)
+        http://download.eclipse.org/releases/mars,luna,juno
 
 
 - Pydev(Python 开发工具)
