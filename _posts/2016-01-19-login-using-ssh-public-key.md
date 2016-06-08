@@ -47,10 +47,10 @@ tags: [ ssh,centos,linux ]
 3. 登录服务器, 进行如下操作(把上传的publickey 导入到服务器中).
 
 		$ mkdir ~/.ssh
-		$ chmod 700 .ssh
 		$ cat vm01_rsa.pub >> ~/.ssh/authorized_keys
 		$ rm -rf vm01_rsa.pub
-		$ chmod 600 ~/.ssh/*
+		$ chmod 600 ~/.ssh/authorized_keys
+		$ chmod 700 .ssh
 
 4. 配置服务器端的ssh, 关闭password登录, 打开publicKey认证, 打开认证文件位置.
 
