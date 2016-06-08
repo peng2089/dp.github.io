@@ -52,19 +52,21 @@ tags: [ ssh,centos,linux ]
 		$ rm -rf vm01_rsa.pub
 		$ chmod 600 ~/.ssh/*
 
-4. 配置服务器端的ssh, 打开publicKey认证.
+4. 配置服务器端的ssh, 关闭password登录, 打开publicKey认证, 打开认证文件位置.
 
 		$ vi /etc/ssh/sshd_config
+		PasswordAuthentication no
 		PubkeyAuthentication yes
+		AuthorizedKeysFile .ssh/authorized_keys
 
-5. 现在就可以使用ssh客户端导入本地生成的私钥(vm01_rsa), 登录服务器.
+5. 重启 sshd 服务
 
-到现在为止, 登录服务器就可以使用密钥登录了, 但是还有以下几个地方需要配置.
+		$ /etc/init.d/sshd restart
 
-1. ssh-server端口更改
 
-2. ssh-server停止使用传统密码登录
+6. 现在就可以使用ssh客户端导入本地生成的私钥(vm01_rsa), 登录服务器.
 
+注意: 如果更改了ssh默认端口, 且在防火墙里面有配置, 记得要在防火墙里面开启新的端口号, 要不然就悲剧了...
 
 
 
