@@ -68,7 +68,7 @@ tags: [ ssh,ssh会话 ]
 
 
 注:
-如果出现 "Unable to negotiate with 110.173.1.92 port 20022: no matching host key type found. Their offer: ssh-dss"
+如果出现 "Unable to negotiate with *.*.*.* port 22: no matching host key type found. Their offer: ssh-dss"
 
 在~/.ssh/config 目录文件下面，增加以下内容：
     
