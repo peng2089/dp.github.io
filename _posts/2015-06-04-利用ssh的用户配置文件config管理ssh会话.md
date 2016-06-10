@@ -67,3 +67,9 @@ tags: [ ssh,ssh会话 ]
     EscapeChar ~ # 设置escape字符
 
 
+注:
+如果出现 "Unable to negotiate with 110.173.1.92 port 20022: no matching host key type found. Their offer: ssh-dss"
+
+在~/.ssh/config 目录文件下面，增加以下内容：
+    
+    HostkeyAlgorithms ssh-dss
