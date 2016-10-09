@@ -2,6 +2,12 @@
 layout: default
 title: shell语句
 ---
+**apache**
+
+实时监测httpd连接数
+
+	watch -n 1 -d 'pgrep httpd|wc -l'
+
 
 **系统安全**
 
