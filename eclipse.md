@@ -33,13 +33,13 @@ title: Eclipse Plugin
 - shelled
 
 
-	1. man-page viewer
+		1. man-page viewer
 
-		http://download.eclipse.org/technology/linuxtools/updates-nightly/
+			http://download.eclipse.org/technology/linuxtools/updates-nightly/
 
-	2. shelled
-		
-		http://sourceforge.net/projects/shelled/files/latest/download [archive]
+		2. shelled
+			
+			http://sourceforge.net/projects/shelled/files/latest/download [archive]
         
 **其他**
 
