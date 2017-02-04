@@ -15,7 +15,7 @@ exclude: ['Rakefile', 'README.md', 'config.rb']
 # configuration required for some pages
 
 #domain: http://ioioj5.github.io
-domain: https://woniu.me
+domain: https://www.woniu.me
 title: 蜗牛的部落格|江湖人送匪号,血手人屠.
 author: __都非拉得
 email: peng_du2007@qq.com
