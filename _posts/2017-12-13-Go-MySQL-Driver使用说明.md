@@ -48,12 +48,12 @@ CREATE TABLE `tbl_user` (
 1. insert
 
 	```
-	# 1. 直接使用Exec函数添加
+	// 1. 直接使用Exec函数添加
 	res, err := db.Exec("INSERT INTO tb_user (username, password) VALUES (?, ?)","test","123456")
 	if err != nil {
 		log.Fatal(err)
 	}
-	# 2. 首先使用Prepare获得stmt，然后调用Exec添加
+	// 2. 首先使用Prepare获得stmt，然后调用Exec添加
 	stmt, err := db.Prepare("INSERT tb_user SET username=?,password=?")
 	if err != nil {
 		log.Fatal(err)
@@ -62,7 +62,8 @@ CREATE TABLE `tbl_user` (
 	if err != nil {
 		log.Fatal(err)
 	}
-	# 获取刚刚插入的记录的id
+
+	// 获取刚刚插入的记录的id
 	id, err := res.LastInsertId()
 	if err != nil {
 		log.Fatal(err)
@@ -89,7 +90,7 @@ CREATE TABLE `tbl_user` (
 3. select
 
 	```golang
-	# 1. 查询单条数据
+	// 1. 查询单条数据
 	var id int
 	var username, password string
 
@@ -98,7 +99,7 @@ CREATE TABLE `tbl_user` (
 		log.Fatal(err)
 	}
 
-	# 2. 查询多条数据，并遍历
+	// 2. 查询多条数据，并遍历
 	rows, err := db.Query("SELECT `username`, `password` FROM `tbl_user` WHERE `username`=?", "test")
 	if err != nil {
 		log.Fatal(err)
