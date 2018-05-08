@@ -51,3 +51,9 @@ func main(){
 	}
 }
 ```
+output:
+```
+Name => string 
+Age => int 
+Sex => string 
+```
