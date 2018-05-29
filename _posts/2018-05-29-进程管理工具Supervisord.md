@@ -18,7 +18,8 @@ Supervisor 就是解决这种需求的工具，可以保证程序崩溃后，重
 ## 安装
 
 ```bash
-
+# via easy_install
+$ easy_install supervisor
 # via pip
 $ pip install supervisor
 ```
