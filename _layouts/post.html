@@ -4,7 +4,7 @@ layout: cayman
 
 <ol class="breadcrumb">
     <li><a href="{{ site.url }}">Home</a></li>
-    <li class="active">{{ post.title }}</li>
+    <li class="active">{{ page.title }}</li>
 </ol>
 
 {% if page.date %}<p>Posted on {{ page.date | date_to_string }}{% if page.last_updated %}, last updated on {{ page.last_updated | date_to_string }}{% endif %}</p>{% endif %}
