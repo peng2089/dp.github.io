@@ -7,10 +7,9 @@
 	padding: 8px 15px;
 	margin-bottom: 20px;
 	list-style: none;
-	background-color: #f5f5f5;
 	border-radius: 4px;
 }
-.breadcrumb>li+li {
+.breadcrumb>li+li :before{
 	padding: 0 5px;
 	color: #ccc;
 	content: "/\00a0";
