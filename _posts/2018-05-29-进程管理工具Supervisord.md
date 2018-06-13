@@ -21,6 +21,8 @@ Supervisor 就是解决这种需求的工具，可以保证程序崩溃后，重
 # via easy_install
 $ easy_install supervisor
 # via pip
+# yum intall epel-release
+# yum install python-pip
 $ pip install supervisor
 ```
 
