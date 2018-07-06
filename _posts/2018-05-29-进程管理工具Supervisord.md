@@ -50,7 +50,7 @@ startsecs=5
 user=root ; 用哪个用户启动
 redirect_stderr=true ; 把 stderr 重定向到 stdout，默认 false
 ; stdout 日志文件，需要注意当指定目录不存在时无法正常启动，所以需要手动创建目录（supervisord 会自动创建日志文件）
-stdout_logfil =/var/log/supervisord/beepkg.log
+stdout_logfile =/data/log/beepkg.log
 
 
 stdout_logfile_maxbytes=20MB  ; stdout 日志文件大小，默认 50MB
