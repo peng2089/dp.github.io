@@ -1,4 +1,11 @@
 
+---
+layout: post
+title: CentOS之vsftpd安装配置
+keywords: vsftpd
+description: CentOS之vsftpd安装配置
+tags: [ FFmpeg ]
+---
 # CentOS之vsftpd安装配置
 
 1. 更新源,关闭selinux
