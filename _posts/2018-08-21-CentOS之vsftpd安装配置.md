@@ -1,21 +1,17 @@
----
-layout: post
-title: ubuntu15.04安装vsftpd
-keywords: vsftpd,ubuntu
-description: ubuntu15.04安装vsftpd
-tags: [ vsftpd, ubuntu ]
----
 
-## 安装
+# CentOS之vsftpd安装配置
 
-    $ sudo apt-get install vsftpd
+1. 更新源,关闭selinux
 
-## 配置
+2. 安装vsftpd
 
-**配置vsftpd.conf**
+    ```bash
+    # yum install vsftpd
+    ```
 
-    $ sudo vi /etc/vftpd.conf
+3. 配置
 
+    ```bash
     anonymous_enable=NO # 是否允许匿名用户访问(YES-允许,NO-不允许)
     local_enable=YES # 设定本地用户可以访问。注：如使用虚拟宿主用户，在该项目设定为NO的情况下所有虚拟用户将无法访问。
     chroot_list_enable=YES # 限定用户不可以离开主目录
@@ -36,65 +32,64 @@ tags: [ vsftpd, ubuntu ]
     chmod_enable=YES # 开启chmod命令
 
     use_localtime=YES|NO # 默认为NO。YES，VSFTPD显示目录列表时使用你本地时区的时间。默认是显示GMT时间。同样，由ftp命令“MDTM”返回的时间值也受此选项影响。
+    ```
 
-[官方vsftp.conf文档][link1]
+4. 创建chroot list，将ftp用户加入其中
 
-**创建chroot list，将ftp用户加入其中**
-
+    ```bash
     touch /etc/vsftpd/chroot_list
     echo ftp >> /etc/vsftpd/chroot_list
+    ```
 
-**认证**,需要确认是否安装了db_load
+5. 创建用户密码文本, 注意奇行是用户名，偶行是密码
 
-    $ sudo apt-get install db5.3_load
+    ```bash
+    # vi /etc/vsftpd/vuser_passwd.txt
+    test
+    123456
+    ```
 
-**创建用户密码文本**/etc/vsftpd/vuser_passwd.txt,注意奇行是用户名，偶行是密码,如:
+6. 生成认证文件
 
-    ftpuser1
-    ftppass1
-    ftpuser2
-    ftppass2
+    ```bash
+    # db_load -T -t hash -f /etc/vsftpd/vuser_passwd.txt /etc/vsftpd/vuser_passwd.db
+    ```
 
-**生成虚拟用户认证的db文件**
+7. 编辑认证文件/etc/pam.d/vsftpd
+    > 全部注释掉原来语句,再增加以下两句,注意要确认pam_userdb.so的位置.
 
-    db5.3_load -T -t hash -f /etc/vsftpd/vuser_passwd.txt /etc/vsftpd/vuser_passwd.db
+    ```bash
+    auth required /usr/lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd
+    account required /usr/lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd
+    ```
+8. 创建虚拟用户个性RHEL/CentOS FTP服务文件
 
-**编辑认证文件/etc/pam.d/vsftpd**，全部注释掉原来语句,再增加以下两句,注意要确认pam_userdb.so的位置.
-
-    auth required /lib/x86_64-linux-gnu/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd
-    account required /lib/x86_64-linux-gnu/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd
-
-**创建虚拟用户个性RHEL/CentOS FTP服务文件**
-
-    $ sudo mkdir /etc/vsftpd/vuser_conf/
-    $ sudo vi /etc/vsftpd/vuser_conf/ftpuser1
-
-内容如下：
-
-    local_root=~/Downloads/ftp
+    ```bash
+    # mkdir /etc/vsftpd/vuser_conf/
+    # vi /etc/vsftpd/vuser_conf/test
+    local_root=/data/ftp/test
     write_enable=YES
-	download_enable=YES
+    download_enable=YES
     anon_umask=022
-	anon_world_readable_only=NO
     anon_world_readable_only=NO
     anon_upload_enable=YES
     anon_mkdir_write_enable=YES
     anon_other_write_enable=YES
+    listen_port=21
+    ```
 
+9. 创建ftp文件夹并配置权限，注意:根目录不能有写权限.
 
-**创建ftp文件夹并配置权限**，注意:根目录不能有写权限.
+    ```bash
+    # mkdir -p /data/ftp/test
+    # chown ftp.ftp -R /data/ftp/test
+    # chmod 775 -R /data/ftp/test
+    ```
 
-    $ sudo mkdir ~/Downloads/ftp
-    $ sudo mkdir ~/Downloads/ftp/soft/
-    $ sudo chown ioioj5.ftp -R ftp
-    $ sudo chmod 555 -R ~/Downloads/ftp
-    $ sudo chmod 777 -R ~/Downloads/ftp/soft/
+10. 防火墙开启端口
 
-    $ sudo service vsftpd restart
-
-
-至此，vsftpd服务器配置完毕, 至于CentOS下的配置大同小异.
-
-
-
-[link1]:http://vsftpd.beasts.org/vsftpd_conf.html
+```bash
+# firewall-cmd --add-service=ftp --permanent
+# firewall-cmd --reload
+# systemctl restart firewalld
+```
