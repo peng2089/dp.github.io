@@ -4,7 +4,7 @@ layout: post
 title: CentOS之vsftpd安装配置
 keywords: vsftpd
 description: CentOS之vsftpd安装配置
-tags: [ FFmpeg ]
+tags: [ vsftpd,CentOS ]
 ---
 # CentOS之vsftpd安装配置
 
