@@ -6,7 +6,7 @@
 2. 安装vsftpd
 
     ```bash
-    # yum install vsftpd
+    \$ yum install vsftpd
     ```
 
 3. 配置
@@ -44,7 +44,7 @@
 5. 创建用户密码文本, 注意奇行是用户名，偶行是密码
 
     ```bash
-    # vi /etc/vsftpd/vuser_passwd.txt
+    \$ vi /etc/vsftpd/vuser_passwd.txt
     test
     123456
     ```
@@ -52,21 +52,22 @@
 6. 生成认证文件
 
     ```bash
-    # db_load -T -t hash -f /etc/vsftpd/vuser_passwd.txt /etc/vsftpd/vuser_passwd.db
+    \$ db_load -T -t hash -f /etc/vsftpd/vuser_passwd.txt /etc/vsftpd/vuser_passwd.db
     ```
 
 7. 编辑认证文件/etc/pam.d/vsftpd
     > 全部注释掉原来语句,再增加以下两句,注意要确认pam_userdb.so的位置.
 
     ```bash
+    \$ vi /etc/pam.d/vsftpd
     auth required /usr/lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd
     account required /usr/lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd
     ```
 8. 创建虚拟用户个性RHEL/CentOS FTP服务文件
 
     ```bash
-    # mkdir /etc/vsftpd/vuser_conf/
-    # vi /etc/vsftpd/vuser_conf/test
+    \$ mkdir /etc/vsftpd/vuser_conf/
+    \$ vi /etc/vsftpd/vuser_conf/test
     local_root=/data/ftp/test
     write_enable=YES
     download_enable=YES
@@ -81,15 +82,15 @@
 9. 创建ftp文件夹并配置权限，注意:根目录不能有写权限.
 
     ```bash
-    # mkdir -p /data/ftp/test
-    # chown ftp.ftp -R /data/ftp/test
-    # chmod 775 -R /data/ftp/test
+    \$ mkdir -p /data/ftp/test
+    \$ chown ftp.ftp -R /data/ftp/test
+    \$ chmod 775 -R /data/ftp/test
     ```
 
 10. 防火墙开启端口
 
-```bash
-# firewall-cmd --add-service=ftp --permanent
-# firewall-cmd --reload
-# systemctl restart firewalld
-```
+    ```bash
+    \$ firewall-cmd --add-service=ftp --permanent
+    \$ firewall-cmd --reload
+    \$ systemctl restart firewalld
+    ```
