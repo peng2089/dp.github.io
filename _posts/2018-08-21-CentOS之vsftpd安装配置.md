@@ -85,7 +85,15 @@ tags: [ vsftpd,CentOS ]
     listen_port=21
     ```
 
-9. 创建ftp文件夹并配置权限，注意:根目录不能有写权限.
+9. 开启PASV模式 
+
+    ```
+    pasv_enable=YES
+    pasv_min_port=30000
+    pasv_max_port=31000
+    ```
+
+10. 创建ftp文件夹并配置权限，注意:根目录不能有写权限.
 
     ```bash
     $ mkdir -p /data/ftp/test
@@ -93,7 +101,7 @@ tags: [ vsftpd,CentOS ]
     $ chmod 775 -R /data/ftp/test
     ```
 
-10. 防火墙开启端口
+11. 防火墙开启端口
 
     ```bash
     $ firewall-cmd --add-service=ftp --permanent
