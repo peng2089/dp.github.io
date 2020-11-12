@@ -32,12 +32,19 @@ $ nvm ls-remote # 查看nvm中node可用版本
 $ nvm install node # 安装最新版本
 $ nvm install 10.23.0 # 安装指定版本
 $ nvm ls # 查看已安装版本
+$ nvm ls-remote # 查看nvm提供的可下载版本
 $ nvm use v10.23.0 # 使用某个版本
 ```
 
 2. 安装cnmp
 ```
 $ npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+
+3. 更换镜像
+```
+$ npm config set registry https://registry.npm.taobao.org --global
+$ npm config set disturl https://npm.taobao.org/dist --global
 ```
 [node官网](https://nodejs.org/zh-cn/)
 
