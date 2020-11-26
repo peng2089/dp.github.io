@@ -52,5 +52,7 @@ $ yum install -y yarn
 ```
 
 [node官网](https://nodejs.org/zh-cn/)
+
 [yarn官方](https://classic.yarnpkg.com/zh-Hans/)
+
 [nvm](https://github.com/nvm-sh/nvm)
