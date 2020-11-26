@@ -7,12 +7,9 @@ tags: [ node,nodejs,linux ]
 ---
 
 ## nvm安装配置
-> [nvm](https://github.com/nvm-sh/nvm)
-
 1. 安装
 ```bash
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
-
 ```
 
 2. 设置环境变量
@@ -27,7 +24,6 @@ $ nvm ls-remote # 查看nvm中node可用版本
 ```
 
 ## node安装配置
-
 1. 安装node
 ```
 $ nvm install node # 安装最新版本
@@ -47,13 +43,14 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 $ npm config set registry https://registry.npm.taobao.org --global
 $ npm config set disturl https://npm.taobao.org/dist --global
 ```
-[node官网](https://nodejs.org/zh-cn/)
 
 ## 包管理工具
-
 1. yarn
 ```bash
 $ curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
 $ yum install -y yarn
 ```
+
+[node官网](https://nodejs.org/zh-cn/)
 [yarn官方](https://classic.yarnpkg.com/zh-Hans/)
+[nvm](https://github.com/nvm-sh/nvm)
