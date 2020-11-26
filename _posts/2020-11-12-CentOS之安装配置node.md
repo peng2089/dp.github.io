@@ -51,6 +51,7 @@ $ curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/
 $ yum install -y yarn
 ```
 
+## 附录
 [node官网](https://nodejs.org/zh-cn/)
 
 [yarn官方](https://classic.yarnpkg.com/zh-Hans/)
