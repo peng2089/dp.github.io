@@ -27,7 +27,7 @@ $ nvm ls-remote # 查看nvm中node可用版本
 1. 安装node
 ```
 $ nvm install node # 安装最新版本
-$ nvm install 10.23.0 # 安装指定版本
+$ nvm install 14.15.4 # 安装指定版本, 最新的lts
 $ nvm ls # 查看已安装版本
 $ nvm ls-remote # 查看nvm提供的可下载版本
 $ nvm use v10.23.0 # 使用某个版本
@@ -42,6 +42,15 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```bash
 $ npm config set registry https://registry.npm.taobao.org --global
 $ npm config set disturl https://npm.taobao.org/dist --global
+```
+
+4. 配置npm
+```bash
+$ npm config list # 显示npm配置项
+$ npm config ls -l # 显示npm所有默认配置
+# 需要注意以下两个配置, 这两个文件夹有可能会随着开发不断地变大
+$ npm config get prefix # npm全局模块存放位置
+$ npm config get cache # npmcache存放位置
 ```
 
 ## 包管理工具
