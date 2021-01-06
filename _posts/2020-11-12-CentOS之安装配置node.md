@@ -32,6 +32,7 @@ $ nvm ls # 查看已安装版本
 $ nvm ls-remote # 查看nvm提供的可下载版本
 $ nvm use v10.23.0 # 使用某个版本
 ```
+ps: 安装nvm的时候, 可能会出现nvm下载失败的情况, 可以去[这个网站](https://www.ipaddress.com), 查一下raw.githubusercontent.com的ipv4的地址, 例如, 我现在查到的地址是199.232.96.133, 然后把这个ip跟域名放到hosts文件里面做一下映射, 就可以啦.
 
 2. 安装cnmp
 ```bash
