@@ -1,5 +1,5 @@
 ---
-layout: cayman
+layout: default
 keywords:  web,php,CentOS,Go,Python
 description: 关注后端技术、互联网技术。
 ---
