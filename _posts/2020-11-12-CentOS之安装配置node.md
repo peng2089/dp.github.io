@@ -9,6 +9,7 @@ tags: [ node,nodejs,linux ]
 ## nvm安装配置
 1. 安装nvm
 > [nvm](https://github.com/nvm-sh/nvm)是一个node.js的版本管理工具, 可以允许多个不同版本的node同时存在.
+
 ```bash
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
 ```
@@ -67,6 +68,7 @@ $ yum install -y yarn
 
 ## 安装vue
 > Vue官方提供的一个命令行工具 [Vue CLI](https://cli.vuejs.org/zh/guide/)
+
 ```bash
 $ npm install -g @vue/cli
 $ vue --version // 检查是否安装正确
