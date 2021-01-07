@@ -67,6 +67,7 @@ $ vue create hello-world // 创建项目hello-world
 $ cd hello-world
 $ npm run serve // 运行项目
 ```
+![npm run serve]({{ site.url }}/static/images/npm_run_serve.png "npm run serve")
 
 ## 附录
 
