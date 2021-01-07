@@ -19,12 +19,10 @@ ps: 安装nvm的时候, 可能会出现nvm下载失败的情况, 可以去[这�
 $ source /root/.bashrc
 $ echo $NVM_DIR // 验证环境变量是否设置成功
 $ nvm --version // 验证nvm是否安装成功
-
 // 添加环境变量 NVM_NODEJS_ORG_MIRROR
 $ vi /etc/profile
 $ export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 $ source /etc/profile // 使上面的配置生效
-
 $ nvm ls-remote // 查看nvm中node可用版本
 ```
 
@@ -72,7 +70,6 @@ $ yum install -y yarn
 ```bash
 $ npm install -g @vue/cli
 $ vue --version // 检查是否安装正确
-
 $ vue create hello-world // 创建项目hello-world
 $ cd hello-world
 $ npm run serve // 运行项目
