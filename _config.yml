@@ -7,7 +7,7 @@ name: __都非拉得的博客
 markdown: kramdown
 
 # code highlighting
-highlighter: rouge
+# highlighter: rouge
 
 # standard jekyll configuration options
 exclude: ['Rakefile', 'README.md', 'config.rb']
