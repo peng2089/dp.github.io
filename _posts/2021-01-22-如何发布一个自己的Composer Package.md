@@ -82,3 +82,7 @@ $ composer init
 3. 提交后, 就可以看到你的package 在https://packagist.org的地址了
 
 ## END
+
+[Composer官网](https://getcomposer.org/)
+[Composer中文站](https://www.phpcomposer.com/)
+[Composer 中文文档](https://learnku.com/docs/composer/2018)
