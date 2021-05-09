@@ -7,19 +7,22 @@ tags: [ smokeping ]
 ---
 # 服务器监控之smokeping
 
-1. 安装依赖
+## 1. 安装依赖
+
 ```bash
 $ sudo apt-get install curl libauthen-radius-perl libnet-ldap-perl libnet-dns-perl libio-socket-ssl-perl libnet-telnet-perl libsocket6-perl libio-socket-inet6-perl apache2
 ```
 
 
-2. 安装smokeping
+## 2. 安装smokeping
+
 ```bash
 $ sudo apt-get install smokeping
 $ sudo apt-get install sendmail
 ```
 
-3. 安装tcpping
+## 3. 安装tcpping
+
 ```bash
 $ sudo apt-get install tcptraceroute bc
 $ cd /usr/bin
@@ -27,7 +30,8 @@ $ sudo wget http://www.vdberg.org/~richard/tcpping
 $ sudo chmod +x tcpping
 ```
 
-4. 配置smokeping
+## 4. 配置smokeping
+
 ```bash
 $ vi /etc/smokeping/config.d/Ping
 + ping
@@ -68,7 +72,8 @@ timeout = 20
 urlformat = http://%host%/
 ```
 
-5. 配置apache
+## 5. 配置apache
+
 ```bash
 $ sudo vim /etc/apache2/conf-available/serve-cgi-bin.conf
 
@@ -79,7 +84,8 @@ Alias /smokeping /usr/share/smokeping/www
 </Directory>
 ```
 
-6. 重启服务
+## 6. 重启服务
+
 ```bash
 sudo a2enmod cgi
 sudo service apache2 restart
@@ -87,7 +93,7 @@ sudo service smokeping restart
 ```
 
 
-7. 附录
+## 7. 附录
 https://oss.oetiker.ch/smokeping/doc/smokeping_install.en.html
 https://blog.csdn.net/chijiu4353/article/details/100643709
 https://blog.csdn.net/weixin_33725126/article/details/85589365
