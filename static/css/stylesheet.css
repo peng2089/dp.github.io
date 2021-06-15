@@ -271,4 +271,15 @@ img {
 }
 
 /*======= breadcrumb ==========*/
+.breadcrumb {
+	list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0px 5px 0px;
+}
+.breadcrumb li {
+	display: inline-block;
+}
+.breadcrumb li:nth-child(n+2):before {
+    content: "/";
+}
 </style>
