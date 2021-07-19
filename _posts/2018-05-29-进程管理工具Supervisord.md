@@ -75,12 +75,11 @@ $ supervisorctl update                    # 根据最新的配置文件，启动
 ```
 
 ## 创建supervisord服务
-
 >  supervisord服务
 
-1. 创建supervisord service文件
+
+1. 创建supervisord service文件 
 ```bash
-$ touch supervisord.service
 
 [Unit]
 Description=Supervisor daemon
@@ -96,6 +95,7 @@ RestartSec=42s
 
 [Install]
 WantedBy=multi-user.target
+
 ```
 
 2. 将文件拷贝到/usr/lib/systemd/system/
