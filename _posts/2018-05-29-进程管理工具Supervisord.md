@@ -79,7 +79,22 @@ $ supervisorctl update                    # 根据最新的配置文件，启动
 
 
 1. 创建service文件
+```bash
+	[Unit]
+	Description=Supervisor daemon
 
+	[Service]
+	Type=forking
+	ExecStart=/usr/bin/supervisord -c /etc/supervisord.conf
+	ExecStop=/usr/bin/supervisorctl shutdown
+	ExecReload=/usr/bin/supervisorctl reload
+	KillMode=process
+	Restart=on-failure
+	RestartSec=42s
+
+	[Install]
+	WantedBy=multi-user.target
+```
 
 2. 将文件拷贝到/usr/lib/systemd/system/
 ```bash
