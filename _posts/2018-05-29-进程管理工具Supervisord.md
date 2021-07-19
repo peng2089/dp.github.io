@@ -85,16 +85,16 @@ $ touch supervisord.service
 [Unit] 
 Description=Supervisor daemon
 
-[Service] 
-Type=forking 
-ExecStart=/usr/bin/supervisord -c /etc/supervisord.conf 
-ExecStop=/usr/bin/supervisorctl shutdown 
-ExecReload=/usr/bin/supervisorctl reload 
-KillMode=process 
-Restart=on-failure 
+[Service]
+Type=forking
+ExecStart=/usr/bin/supervisord -c /etc/supervisord.conf
+ExecStop=/usr/bin/supervisorctl shutdown
+ExecReload=/usr/bin/supervisorctl reload
+KillMode=process
+Restart=on-failure
 RestartSec=42s
 
-[Install] 
+[Install]
 WantedBy=multi-user.target
 ```
 
