@@ -79,9 +79,7 @@ $ supervisorctl update                    # 根据最新的配置文件，启动
 
 
 1. 创建service文件
-
 ```bash
-
 [Unit]
 Description=Supervisor daemon
 
@@ -96,7 +94,6 @@ RestartSec=42s
 
 [Install]
 WantedBy=multi-user.target
-
 ```
 
 2. 将文件拷贝到/usr/lib/systemd/system/
