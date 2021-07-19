@@ -4,11 +4,13 @@ encoding: utf-8
 url: http://www.woniu.me
 name: __都非拉得的博客
 
-markdown: kramdown
+# markdown: kramdown
 
 # code highlighting
-# highlighter: rouge
-
+highlighter: rouge
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
 # standard jekyll configuration options
 exclude: ['Rakefile', 'README.md', 'config.rb']
 
