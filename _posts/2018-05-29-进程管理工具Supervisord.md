@@ -80,9 +80,9 @@ $ supervisorctl update                    # 根据最新的配置文件，启动
 
 1. 创建supervisord service文件
 ```bash
-$ touch supervisord.service 
+$ touch supervisord.service
 
-[Unit] 
+[Unit]
 Description=Supervisor daemon
 
 [Service]
