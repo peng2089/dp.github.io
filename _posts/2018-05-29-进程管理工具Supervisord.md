@@ -76,6 +76,8 @@ $ supervisorctl update                    # 根据最新的配置文件，启动
 
 ## 创建supervisord服务
 
+>  supervisord服务
+
 1. 创建supervisord.service文件
 ```bash
 $ touch supervisord.service 
