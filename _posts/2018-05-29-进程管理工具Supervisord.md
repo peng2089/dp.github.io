@@ -77,7 +77,6 @@ $ supervisorctl update                    # 根据最新的配置文件，启动
 ## 创建supervisord服务
 
 1. 创建supervisord.service文件
-
 ```bash
 #supervisord.service
 
@@ -98,19 +97,16 @@ WantedBy=multi-user.target
 ```
 
 2. 将文件拷贝到/usr/lib/systemd/system/
-
 ```bash
 $ cp supervisord.service /usr/lib/systemd/system/
 ```
 
 3. 设置开机启动
-
 ```bash
 $ systemctl enable supervisord
 ```
 
 4. 验证是否开机启动
-
 ```bash
 $ systemctl is-enabled supervisord
 ```
