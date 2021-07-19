@@ -78,6 +78,7 @@ $ supervisorctl update                    # 根据最新的配置文件，启动
 
 1. 创建supervisord.service文件
 ```bash
+
 [Unit] 
 Description=Supervisor daemon
 
