@@ -41,23 +41,43 @@ $ cd /etc/supervisord.conf.d
 $ vim beepkg.conf
 
 # 配置文件：
-[program:beepkg]					; 程序名称，在 supervisorctl 中通过这个值来对程序进行一系列的操作
-directory=/opt/app/beepkg			; 程序的启动目录
-command=/opt/app/beepkg/beepkg		; 启动命令，与手动在命令行启动的命令是一样的
-autostart=true						; 在 supervisord 启动的时候也自动启动
-autorestart=unexpected				; 程序异常退出后自动重启
-startsecs=5
-user=root							; 用哪个用户启动
-redirect_stderr=true				; 把 stderr 重定向到 stdout，默认 false
-; stdout 日志文件，需要注意当指定目录不存在时无法正常启动，所以需要手动创建目录（supervisord 会自动创建日志文件）
-stdout_logfile =/data/log/beepkg.log
+注：supervisord.d目录用来存放用户自定义的进程配置
+例子：文件 qqc.ini
 
-
-stdout_logfile_maxbytes=20MB			; stdout 日志文件大小，默认 50MB
-stdout_logfile_backups=20				; stdout 日志文件备份数
-environment=PATH="/home/app_env/bin"	; 可以通过 environment 来添加需要的环境变量，一种常见的用法是使用指定的 virtualenv 环境
 ```
+# 程序名称，在 supervisorctl 中通过这个值来对程序进行一系列的操作
+[program:beepkg]
+# 启动命令，与手动在命令行启动的命令是一样的
+command=/opt/app/beepkg/beepkg
+# 程序的启动目录
+directory=/opt/app/beepkg/
+# 可以通过 environment 来添加需要的环境变量，一种常见的用法是使用指定的 virtualenv 环境
+environment=PATH="/home/app_env/bin"
+# 指定用户名
+user=opt
+# 日志目录 需要注意当指定目录不存在时无法正常启动，所以需要手动创建目录（supervisord 会自动创建日志文件）
+stdout_logfile=/var/log/test-stdout.log
+stderr_logfile=/var/log/test-stderr.log
+# 日志备份数量
+stdout_logfile_backups = 20
+# 指定日志文件大小
+stdout_logfile_maxbytes = 20MB 
+# 把 stderr 重定向到 stdout，默认 false,错误日志也会写进stdout_logfile中
+redirect_stderr=True
+# 在 supervisord 启动的时候也自动启动
+autostart=True    
+# 程序异常退出后自动重启
+autorestart=True
 
+[program:beepkg_two]
+...
+[program:beepkg_free]
+...
+
+# 集中管理多个进程
+[group:beepkgs]
+programs=beepkg,beepkg_two,beepkg_free
+```
 ## supervisord 管理
 
 > Supervisord 安装完成后有两个可用的命令行 supervisord 和 supervisorctl，命令使用解释如下
