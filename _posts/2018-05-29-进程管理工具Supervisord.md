@@ -44,7 +44,6 @@ $ vim beepkg.conf
 注：supervisord.d目录用来存放用户自定义的进程配置
 例子：文件 qqc.ini
 
-```
 # 程序名称，在 supervisorctl 中通过这个值来对程序进行一系列的操作
 [program:beepkg]
 # 启动命令，与手动在命令行启动的命令是一样的
