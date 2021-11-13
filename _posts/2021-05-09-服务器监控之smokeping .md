@@ -5,7 +5,6 @@ keywords: smokeping
 description: 服务器监控之smokeping
 tags: [ smokeping ]
 ---
-# 服务器监控之smokeping
 
 ## 1. 安装依赖
 
