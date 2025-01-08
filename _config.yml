@@ -13,8 +13,8 @@ exclude: ['Rakefile', 'README.md', 'config.rb']
 
 # configuration required for some pages
 
-#domain: http://ioioj5.github.io
-domain: http://www.woniu.me
+domain: http://ioioj5.github.io
+#domain: http://www.woniu.me
 author: __都非拉得
 email: peng_du2007@qq.com
 
